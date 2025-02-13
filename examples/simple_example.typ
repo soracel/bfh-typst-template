@@ -12,8 +12,8 @@
 #let departement = "Technik und Informatik"
 
 #let abbreviations = (
-  "ABB": "Asea Brown Boveri",
-  "SBB": "Schweizerische Bundesbahnen",
+  "e.g.": "Exempli gratia",
+  "TA": "Test abbreviation",
 )
 
 #let glossary = (
@@ -47,7 +47,7 @@
 #lorem(90) @snippets-theme
 #figure(
   image("assets/img/cover.png"),
-  caption: "SBB Train Arial View"
+  caption: "Generated Example Image"
 )
 
 == Motivation
