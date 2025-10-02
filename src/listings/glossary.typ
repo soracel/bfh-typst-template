@@ -12,7 +12,7 @@
 
   v(0.5cm)
   table(
-    columns: 2,
+    columns: (1fr, 3fr),
     ..for (term, explanation) in glossaryList.sorted(key: it => lower(it.first())) {
       (term, explanation)
     }

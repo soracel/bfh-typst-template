@@ -1,4 +1,4 @@
-#import "../template/documentation.typ": documentation
+#import "../template/thesis.typ": thesis
 
 #let author = "Max Mustermann"
 #let version = "1.0"
@@ -18,9 +18,11 @@
 
 #let glossary = (
   "Developer": "Fachkraft, die ein Computerprogramm entwickelt.",
+  "Long explanation": lorem(50),
+  "Long term (Lorem ipsum dolor sit amet)": lorem(10),
 )
 
-#show: documentation.with(
+#show: thesis.with(
   author: author,
   version: version,
   title: title,
@@ -34,15 +36,20 @@
   coverImage: image("assets/img/cover.png", width: 100%),
   signatureImage: image("assets/img/signature.png"),
   datePlaceImage: image("assets/img/place-date.png"),
-  managmentSummery: lorem(150),
+  abstract: [
+    = Managment Summery
+    #lorem(150)
+  ],
   abbreviations: abbreviations,
   glossary: glossary,
   bibliography: bibliography("assets/works.yaml", title: "Literatur- und Quellenverzeichnis", style: "ieee"),
   appendice: [
     = Anhang
-  ]
+    #lorem(250)
+  ],
 )
 
+// --- Your content goes here ---
 = Einleitung
 #lorem(90) @snippets-theme
 #figure(
